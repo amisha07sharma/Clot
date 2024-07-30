@@ -1,0 +1,56 @@
+{
+    "SIGN_IN_SCREEN":{
+        "SIGN_IN":"Sign In",
+        "EMAIL_ADDRESS":"Email Address",
+        "CONTINUE":"Continue",
+        "NO_ACCOUNT":"Don't have an Account?",
+        "CREATE":" Create One",
+        "APPLE":"Continue with Apple",
+        "GOOGLE":"Continue with Google",
+        "FACEBOOK":"Continue with Facebook",
+        "FORGOT_PASSWORD":"Forgot Password ?",
+        "RESET":" Reset",
+        "PASSWORD":"Password"
+    },
+    "RESET_PASSWORD_SCREEN":{
+        "EMAIL_SENT":" We Sent you an Email to reset your password.",
+        "RETURN_TO_LOGIN":"Return to Login"
+    },
+    "FORGOT_PASSWORD_SCREEN":{
+        "ENTER_EMAIL":"Enter Email Address",
+        "CONTINUE":"Continue",
+        "FORGOT_PASSWORD":"Forgot Password"
+    },
+    "CREATE_ACCOUNT_SCREEN":{
+        "CREATE_ACCOUNT":"Create Account",
+        "FIRST_NAME":"FirstName",
+        "LAST_NAME":"LastName",
+        "EMAIL_ADDRESS":"Email Address",
+        "PASSWORD":"Password",
+        "CONTINUE":"Continue",
+        "FORGOT_PASSWORD":"Forgot Password ?",
+        "RESET":" Reset"
+    },
+    "BASIC_DETAILS_SCREEN":{
+        "ABOUT_YOURSELF":"Tell us About yourself",
+        "SHOP_FOR":"Who do you shop for ?",
+        "MEN":"Men",
+        "WOMEN":"Women",
+        "HOW_OLD":"How Old are you ?",
+        "FINISH":"Finish",
+        "AGE_RANGE":"Age Range"
+    },
+    "HOMEPAGE_SCREEN":{
+        "SEARCH":"Search"
+    },
+    "CART_SCREEN":{
+        "TITLE":"Your Cart is Empty",
+        "BUTTON_TITLE":"Explore Categories"
+    },
+    "NOTIFICATION_SCREEN":{
+        "TITLE":"No Notification yet"
+    },
+    "ORDERS_SCREEN":{
+        "TITLE":"No Orders yet"
+    }
+}

@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for CreateAccount Screen should match the snapshot 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "white",
+      "height": "100%",
+      "paddingBottom": 20,
+      "paddingLeft": 20,
+      "paddingRight": 20,
+      "paddingTop": 50,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "fontSize": 32,
+        "fontWeight": "700",
+        "letterSpacing": -0.41,
+        "lineHeight": 34.5,
+        "marginBottom": 30,
+      }
+    }
+  >
+    Create Account
+  </Text>
+  <TextInput
+    backgroundColor="#f4f4f4"
+    borderRadius={4}
+    borderWidth={0.1}
+    fontSize={16}
+    height={56}
+    letterSpacing={-0.41}
+    lineHeight={20.24}
+    marginBottom={20}
+    onChangeText={[Function]}
+    paddingLeft={10}
+    placeholder="FirstName"
+    style={
+      {
+        "fontWeight": "450px",
+      }
+    }
+    testID="FirstNameInput"
+    theme={{}}
+    value={null}
+  />
+  <TextInput
+    backgroundColor="#f4f4f4"
+    borderRadius={4}
+    borderWidth={0.1}
+    fontSize={16}
+    height={56}
+    letterSpacing={-0.41}
+    lineHeight={20.24}
+    marginBottom={20}
+    onChangeText={[Function]}
+    paddingLeft={10}
+    placeholder="LastName"
+    style={
+      {
+        "fontWeight": "450px",
+      }
+    }
+    testID="LastNameInput"
+    theme={{}}
+    value={null}
+  />
+  <TextInput
+    backgroundColor="#f4f4f4"
+    borderRadius={4}
+    borderWidth={0.1}
+    fontSize={16}
+    height={56}
+    letterSpacing={-0.41}
+    lineHeight={20.24}
+    marginBottom={20}
+    onChangeText={[Function]}
+    paddingLeft={10}
+    placeholder="Email Address"
+    style={
+      {
+        "fontWeight": "450px",
+      }
+    }
+    testID="EmailInput"
+    theme={{}}
+    value={null}
+  />
+  <TextInput
+    backgroundColor="#f4f4f4"
+    borderRadius={4}
+    borderWidth={0.1}
+    fontSize={16}
+    height={56}
+    letterSpacing={-0.41}
+    lineHeight={20.24}
+    marginBottom={20}
+    onChangeText={[Function]}
+    paddingLeft={10}
+    placeholder="Password"
+    style={
+      {
+        "fontWeight": "450px",
+      }
+    }
+    testID="PasswordInput"
+    theme={{}}
+    value={null}
+  />
+  <View
+    color="white"
+    disabled={true}
+    onPress={[MockFunction]}
+    testID="ContinueButton"
+    title="Continue"
+  />
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "marginBottom": 80,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 12,
+          "fontWeight": "450",
+          "letterSpacing": -0.41,
+          "lineHeight": 15.18,
+        }
+      }
+    >
+      Forgot Password ?
+    </Text>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+      testID="Reset"
+    >
+      <Text
+        bold={true}
+        style={
+          {
+            "fontSize": 12,
+            "fontWeight": "700",
+            "letterSpacing": -0.41,
+            "lineHeight": 15.18,
+          }
+        }
+      >
+         Reset
+      </Text>
+    </View>
+  </View>
+</View>
+`;

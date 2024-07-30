@@ -1,2 +1,0 @@
-# Clot
-Shopping App

@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests for SignIn Screen should match the snapshot 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "white",
+      "height": "100%",
+      "paddingBottom": 20,
+      "paddingLeft": 20,
+      "paddingRight": 20,
+      "paddingTop": 50,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "fontSize": 32,
+        "fontWeight": "700",
+        "letterSpacing": -0.41,
+        "lineHeight": 34.5,
+        "marginBottom": 30,
+      }
+    }
+  >
+    Sign In
+  </Text>
+  <TextInput
+    backgroundColor="#f4f4f4"
+    borderRadius={4}
+    borderWidth={0.1}
+    fontSize={16}
+    height={56}
+    letterSpacing={-0.41}
+    lineHeight={20.24}
+    marginBottom={20}
+    onChangeText={[Function]}
+    paddingLeft={10}
+    placeholder="Email Address"
+    style={
+      {
+        "fontWeight": "450px",
+      }
+    }
+    testID="EmailInput"
+    theme={{}}
+    value="mocked_email@example.com"
+  />
+  <View
+    disabled={false}
+    onPress={[Function]}
+    testID="ContinueButton"
+    title="Continue"
+  />
+  <View
+    style={
+      {
+        "flexDirection": "row",
+        "marginBottom": 80,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 12,
+          "fontWeight": "450",
+          "letterSpacing": -0.41,
+          "lineHeight": 15.18,
+        }
+      }
+    >
+      Don't have an Account?
+    </Text>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "opacity": 1,
+        }
+      }
+      testID="CreateAccount"
+    >
+      <Text
+        bold={true}
+        style={
+          {
+            "fontSize": 12,
+            "fontWeight": "700",
+            "letterSpacing": -0.41,
+            "lineHeight": 15.18,
+          }
+        }
+      >
+         Create One
+      </Text>
+    </View>
+  </View>
+  <View
+    buttonText="Continue with Apple"
+    imageSource={
+      {
+        "testUri": "../../../src/Images/Apple.png",
+      }
+    }
+    testID="Apple"
+  />
+  <View
+    buttonText="Continue with Google"
+    imageSource={
+      {
+        "testUri": "../../../src/Images/Google.png",
+      }
+    }
+    testID="Google"
+  />
+  <View
+    buttonText="Continue with Facebook"
+    imageSource={
+      {
+        "testUri": "../../../src/Images/Facebook.png",
+      }
+    }
+    testID="Facebook"
+  />
+</View>
+`;

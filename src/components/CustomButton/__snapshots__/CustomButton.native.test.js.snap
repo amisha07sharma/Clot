@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomButton component renders correctly when isActive is true 1`] = `undefined`;
+
+exports[`CustomButton component renders correctly with default props 1`] = `undefined`;

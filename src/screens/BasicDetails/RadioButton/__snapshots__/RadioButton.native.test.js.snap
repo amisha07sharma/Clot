@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioButton component renders correctly when isActive is true 1`] = `undefined`;
+
+exports[`RadioButton component renders correctly with default props 1`] = `undefined`;
