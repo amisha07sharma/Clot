@@ -1,40 +1,24 @@
 import React from "react";
 import { View as MockView } from "react-native";
-import { render, fireEvent, screen } from "@testing-library/react-native";
-import SignInContainer from "./SignInContainer";
+import { render, screen } from "@testing-library/react-native";
+import MockAppProvider from "../../mocks/MockAppProvider";
+import ProductsByCategoryContainer from "./ProductsByCategoryContainer";
 
-const mockNavigation = {
-  navigate: jest.fn(),
-};
-jest.mock("./SignIn", () => (props) => <MockView {...props} />);
+jest.mock("./ProductsByCategory", () => (props) => <MockView {...props} />);
 
-describe("SignInContainer", () => {
-  it("navigates to SignInPassword screen on continue press", () => {
-    render(<SignInContainer navigation={mockNavigation} />);
+describe("ProductsByCategoryContainer", () => {
+  it("renders the ProductsByCategory component with correct props", () => {
+    render(
+      <MockAppProvider>
+        <ProductsByCategoryContainer />
+      </MockAppProvider>
+    );
 
-    const signInComponent = screen.getByTestId("SignIn");
+    const ProductsByCategoryComponent =
+      screen.getByTestId("ProductsByCategory");
 
-    fireEvent(signInComponent, "onContinue");
-
-    expect(mockNavigation.navigate).toHaveBeenCalledWith("SignInPassword");
-  });
-
-  it("navigates to CreateAccount screen on create account press", () => {
-    render(<SignInContainer navigation={mockNavigation} />);
-    const signInComponent = screen.getByTestId("SignIn");
-
-    fireEvent(signInComponent, "onCreateAccountPress");
-
-    expect(mockNavigation.navigate).toHaveBeenCalledWith("CreateAccount");
-  });
-
-  it("renders the SignIn component with correct props", () => {
-    render(<SignInContainer navigation={mockNavigation} />);
-
-    const signInComponent = screen.getByTestId("SignIn");
-
-    expect(signInComponent).toBeTruthy();
-    expect(signInComponent.props.onContinue).toBeDefined();
-    expect(signInComponent.props.onCreateAccountPress).toBeDefined();
+    expect(ProductsByCategoryComponent).toBeTruthy();
+    expect(ProductsByCategoryComponent.props.productsList).toBeDefined();
+    expect(ProductsByCategoryComponent.props.category).toBeDefined();
   });
 });

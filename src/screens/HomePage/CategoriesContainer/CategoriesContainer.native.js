@@ -8,12 +8,12 @@ import {
 } from "./CategoriesContainer.style";
 import { categoriesConstants } from "../../../constants/Categories.constants";
 
-const CategoriesContainer = ({ categoriesList }) => {
+const CategoriesContainer = ({ categoriesList, onCategoryIconPress }) => {
   return (
     <CategoriesView>
       {categoriesList?.map((category) => {
         return (
-          <CategoryView>
+          <CategoryView onPress={() => onCategoryIconPress(category)}>
             <CategoryImageView>
               <Image
                 source={categoriesConstants[category].imageURL}

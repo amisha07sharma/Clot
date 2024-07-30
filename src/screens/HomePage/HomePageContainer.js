@@ -18,8 +18,7 @@ const HomePageContainer = ({ navigation }) => {
         dispatch({ type: "UPDATE_CATEGORIES", payload: res.data });
       })
       .catch((err) => {
-        throw new Error(err);
-        //show ERROR MODAL
+        console.error(err);
       });
   }, [setCategories]);
 
@@ -30,8 +29,7 @@ const HomePageContainer = ({ navigation }) => {
         setProducts(res.data);
       })
       .catch((err) => {
-        throw new Error(err);
-        //show ERROR MODAL
+        console.error(err);
       });
   }, [setProducts]);
 
@@ -42,8 +40,7 @@ const HomePageContainer = ({ navigation }) => {
         setNewIn(res.data);
       })
       .catch((err) => {
-        throw new Error(err);
-        //show ERROR MODAL
+        console.error(err);
       });
   }, [setProducts]);
 
@@ -55,6 +52,10 @@ const HomePageContainer = ({ navigation }) => {
     navigation.navigate("AllProducts");
   };
 
+  const onCategoryIconPress = (category) => {
+    dispatch({ type: "UPDATE_CATEGORY", payload: category });
+    navigation.navigate("ProductsByCategory");
+  };
   return (
     <HomePage
       categories={categories}
@@ -62,6 +63,7 @@ const HomePageContainer = ({ navigation }) => {
       newIn={newIn}
       onCategoriesSeeAll={onCategoriesSeeAll}
       onProductsSeeAll={onProductsSeeAll}
+      onCategoryIconPress={onCategoryIconPress}
     />
   );
 };

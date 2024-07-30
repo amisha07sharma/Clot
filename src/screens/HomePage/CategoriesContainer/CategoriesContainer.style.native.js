@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
-import { Text } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 
 export const CategoriesView = styled.View`
   flex-direction: row;
@@ -7,13 +7,12 @@ export const CategoriesView = styled.View`
   margin: 10px;
 `;
 
-export const CategoryView = styled.View`
+export const CategoryView = styled(TouchableOpacity)`
   align-items: center;
 `;
 
 export const CategoryImageView = styled.View`
   border-radius: 500px;
-  background-color: yellow;
   align-items: center;
 `;
 

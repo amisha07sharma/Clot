@@ -11,7 +11,8 @@ const Categories = ({ onContinue, categories }) => {
       {categories?.map((category) => {
         return (
           <CustomizeButtonWithLogo
-            testID="ContinueButton"
+            key={categoriesConstants[category].id}
+            testID={`ContinueButton-${categoriesConstants[category].id}`}
             imageSource={categoriesConstants[category].imageURL}
             buttonText={categoriesConstants[category].title}
             onPress={() => onContinue(category)}

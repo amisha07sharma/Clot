@@ -1,27 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useContext } from "react";
 import UserAccount from "./UserAccount";
+import { AppContext } from "../../context/AppContext";
 
-const UserAccountContainer = ({ navigation }) => {
-  const onContinue = () => {
-    navigation.navigate("UserAccountPassword");
-  };
-
-  const onCreateAccountPress = () => {
-    navigation.navigate("CreateAccount");
-  };
-  return (
-    <UserAccount
-      testID="UserAccount"
-      onContinue={onContinue}
-      onCreateAccountPress={onCreateAccountPress}
-    />
-  );
+const UserAccountContainer = () => {
+  const { state } = useContext(AppContext);
+  return <UserAccount testID="UserAccount" email={state.email} />;
 };
 
-UserAccountContainer.propTypes = {
-  navigation: PropTypes.shape({
-    navigate: PropTypes.func.isRequired,
-  }).isRequired,
-};
+UserAccountContainer.propTypes = {};
 export default UserAccountContainer;

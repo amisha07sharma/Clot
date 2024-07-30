@@ -40,7 +40,7 @@ describe("Tests for Categories Screen", () => {
   it("calls onContinue function when Continue button is pressed", () => {
     renderComponent();
 
-    fireEvent(screen.getByTestId("ContinueButton"), "onPress");
+    fireEvent(screen.getByTestId("ContinueButton-3"), "onPress");
 
     expect(mockOnContinue).toHaveBeenCalledTimes(1);
   });

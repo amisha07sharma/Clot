@@ -1,7 +1,7 @@
 import React from "react";
 import { View as MockView } from "react-native";
 import { render, fireEvent, screen } from "@testing-library/react-native";
-import CartContainer from "./OrdersContainer";
+import CartContainer from "./CartContainer";
 
 const mockNavigation = {
   navigate: jest.fn(),

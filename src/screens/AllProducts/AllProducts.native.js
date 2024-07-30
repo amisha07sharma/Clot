@@ -18,7 +18,7 @@ const AllProducts = ({ productsList }) => {
         <ProductsView>
           {productsList.map((product) => {
             return (
-              <ProductView>
+              <ProductView key={product.id}>
                 <ProductImageView>
                   <Image
                     source={{ uri: product.image }}
@@ -39,11 +39,14 @@ const AllProducts = ({ productsList }) => {
 };
 
 AllProducts.propTypes = {
-  productsList: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
-  }).isRequired,
+  productsList: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      title: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+      image: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default AllProducts;

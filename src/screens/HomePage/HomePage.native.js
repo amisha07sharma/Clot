@@ -16,6 +16,7 @@ const HomePage = ({
   newIn,
   onCategoriesSeeAll,
   onProductsSeeAll,
+  onCategoryIconPress,
 }) => {
   const [searchData, setSearchData] = useState(null);
   const onChangeText = (text) => {
@@ -30,6 +31,7 @@ const HomePage = ({
         value={searchData}
         autoFocus={true}
         borderRadius={500}
+        marginTop={-20}
       />
       <ScrollView showsVerticalScrollIndicator={false}>
         <View
@@ -44,12 +46,15 @@ const HomePage = ({
             <SeeAllText>See All</SeeAllText>
           </TouchableOpacity>
         </View>
-        <CategoriesContainer categoriesList={categories} />
+        <CategoriesContainer
+          categoriesList={categories}
+          onCategoryIconPress={onCategoryIconPress}
+        />
         <View
           style={{
             justifyContent: "space-between",
             flexDirection: "row",
-            marginTop: 10,
+            marginTop: 30,
           }}
         >
           <SectionHeadingText>Top Selling</SectionHeadingText>
@@ -62,7 +67,7 @@ const HomePage = ({
           style={{
             justifyContent: "space-between",
             flexDirection: "row",
-            marginTop: 10,
+            marginTop: 30,
           }}
         >
           <SectionHeadingText>New In</SectionHeadingText>

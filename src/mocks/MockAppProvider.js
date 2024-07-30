@@ -7,6 +7,21 @@ const initialState = {
   email: "mocked_email@example.com",
   firstName: "John",
   lastName: "Doe",
+  category: "jewelery",
+  categories: [
+    {
+      id: 5,
+      title: "abc",
+      price: "123",
+      image: "image.url",
+    },
+    {
+      id: 7,
+      title: "abcd",
+      price: "129",
+      image: "image2.url",
+    },
+  ],
 };
 
 const MockAppProvider = ({ children }) => {
