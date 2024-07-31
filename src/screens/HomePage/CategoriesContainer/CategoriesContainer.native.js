@@ -13,7 +13,10 @@ const CategoriesContainer = ({ categoriesList, onCategoryIconPress }) => {
     <CategoriesView>
       {categoriesList?.map((category) => {
         return (
-          <CategoryView onPress={() => onCategoryIconPress(category)}>
+          <CategoryView
+            onPress={() => onCategoryIconPress(category)}
+            key={categoriesConstants[category].id}
+          >
             <CategoryImageView>
               <Image
                 source={categoriesConstants[category].imageURL}

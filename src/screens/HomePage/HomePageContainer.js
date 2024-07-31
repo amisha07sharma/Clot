@@ -9,38 +9,50 @@ const HomePageContainer = ({ navigation }) => {
   const [categories, setCategories] = useState([]);
   const [products, setProducts] = useState([]);
   const [newIn, setNewIn] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [loadingTwo, setLoadingTwo] = useState(false);
+  const [loadingThree, setLoadingThree] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     clot
       .get("/products/categories")
       .then((res) => {
         setCategories(res.data);
+        setLoading(false);
         dispatch({ type: "UPDATE_CATEGORIES", payload: res.data });
       })
       .catch((err) => {
+        setLoading(false);
         console.error(err);
       });
   }, [setCategories]);
 
   useEffect(() => {
+    setLoadingTwo(true);
     clot
       .get("/products?limit=5")
       .then((res) => {
         setProducts(res.data);
+        setLoadingTwo(false);
       })
       .catch((err) => {
         console.error(err);
+        setLoadingTwo(false);
       });
   }, [setProducts]);
 
   useEffect(() => {
+    setLoadingThree(true);
     clot
       .get("/products?sort=desc")
       .then((res) => {
         setNewIn(res.data);
+        setLoadingThree(false);
       })
       .catch((err) => {
         console.error(err);
+        setLoadingThree(false);
       });
   }, [setProducts]);
 
@@ -64,6 +76,9 @@ const HomePageContainer = ({ navigation }) => {
       onCategoriesSeeAll={onCategoriesSeeAll}
       onProductsSeeAll={onProductsSeeAll}
       onCategoryIconPress={onCategoryIconPress}
+      loading={loading}
+      loadingTwo={loadingTwo}
+      loadingThree={loadingThree}
     />
   );
 };

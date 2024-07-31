@@ -6,15 +6,19 @@ import clot from "../../api/clot";
 const ProductsByCategoryContainer = () => {
   const { state } = useContext(AppContext);
   const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    setLoading(true);
     clot
       .get(`/products/category/${state.category}`)
       .then((res) => {
         setProducts(res.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.error(err);
+        setLoading(false);
       });
   }, [setProducts]);
 
@@ -23,6 +27,7 @@ const ProductsByCategoryContainer = () => {
       testID="ProductsByCategory"
       category={state.category}
       productsList={products}
+      loading={loading}
     />
   );
 };

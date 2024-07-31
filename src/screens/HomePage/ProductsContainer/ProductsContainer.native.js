@@ -14,7 +14,7 @@ const ProductsContainer = ({ productsList }) => {
       <ScrollView horizontal={true}>
         {productsList.map((product) => {
           return (
-            <ProductView>
+            <ProductView key={product.id}>
               <ProductImageView>
                 <Image
                   source={{ uri: product.image }}

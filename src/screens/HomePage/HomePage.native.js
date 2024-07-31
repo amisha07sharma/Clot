@@ -1,5 +1,10 @@
 import React, { useState } from "react";
-import { View, ScrollView, TouchableOpacity } from "react-native";
+import {
+  View,
+  ScrollView,
+  TouchableOpacity,
+  ActivityIndicator,
+} from "react-native";
 import CLOT from "../../constants/messages.json";
 import {
   MainContainer,
@@ -9,6 +14,7 @@ import {
 } from "../../styles/common.style";
 import CategoriesContainer from "./CategoriesContainer";
 import ProductsContainer from "./ProductsContainer";
+import { PURPLE } from "../../constants/colors";
 
 const HomePage = ({
   categories,
@@ -17,6 +23,9 @@ const HomePage = ({
   onCategoriesSeeAll,
   onProductsSeeAll,
   onCategoryIconPress,
+  loading,
+  loadingTwo,
+  loadingThree,
 }) => {
   const [searchData, setSearchData] = useState(null);
   const onChangeText = (text) => {
@@ -46,10 +55,14 @@ const HomePage = ({
             <SeeAllText>See All</SeeAllText>
           </TouchableOpacity>
         </View>
-        <CategoriesContainer
-          categoriesList={categories}
-          onCategoryIconPress={onCategoryIconPress}
-        />
+        {loading ? (
+          <ActivityIndicator size="small" color={PURPLE} />
+        ) : (
+          <CategoriesContainer
+            categoriesList={categories}
+            onCategoryIconPress={onCategoryIconPress}
+          />
+        )}
         <View
           style={{
             justifyContent: "space-between",
@@ -62,7 +75,11 @@ const HomePage = ({
             <SeeAllText>See All</SeeAllText>
           </TouchableOpacity>
         </View>
-        <ProductsContainer productsList={products} />
+        {loadingTwo ? (
+          <ActivityIndicator size="small" color={PURPLE} />
+        ) : (
+          <ProductsContainer productsList={products} />
+        )}
         <View
           style={{
             justifyContent: "space-between",
@@ -75,7 +92,11 @@ const HomePage = ({
             <SeeAllText>See All</SeeAllText>
           </TouchableOpacity>
         </View>
-        <ProductsContainer productsList={newIn} />
+        {loadingThree ? (
+          <ActivityIndicator size="small" color={PURPLE} />
+        ) : (
+          <ProductsContainer productsList={newIn} />
+        )}
       </ScrollView>
     </MainContainer>
   );

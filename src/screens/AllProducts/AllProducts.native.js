@@ -1,7 +1,8 @@
 import React from "react";
-import { ScrollView, Image } from "react-native";
+import { ScrollView, Image, ActivityIndicator } from "react-native";
 import PropTypes from "prop-types";
 import { MainContainer, HeadingText } from "../../styles/common.style";
+import { PURPLE } from "../../constants/colors";
 import {
   ProductsView,
   ProductView,
@@ -10,30 +11,34 @@ import {
   ProductLabelView,
 } from "./AllProducts.style";
 
-const AllProducts = ({ productsList }) => {
+const AllProducts = ({ productsList, loading }) => {
   return (
     <MainContainer>
       <HeadingText>All Products</HeadingText>
-      <ScrollView>
-        <ProductsView>
-          {productsList.map((product) => {
-            return (
-              <ProductView key={product.id}>
-                <ProductImageView>
-                  <Image
-                    source={{ uri: product.image }}
-                    style={{ width: 150, height: 220 }}
-                  />
-                </ProductImageView>
-                <ProductLabelView>
-                  <ProductText>{product.title}</ProductText>
-                  <ProductText>${product.price}</ProductText>
-                </ProductLabelView>
-              </ProductView>
-            );
-          })}
-        </ProductsView>
-      </ScrollView>
+      {loading ? (
+        <ActivityIndicator size="large" color={PURPLE} marginTop={40} />
+      ) : (
+        <ScrollView>
+          <ProductsView>
+            {productsList.map((product) => {
+              return (
+                <ProductView key={product.id}>
+                  <ProductImageView>
+                    <Image
+                      source={{ uri: product.image }}
+                      style={{ width: 150, height: 220 }}
+                    />
+                  </ProductImageView>
+                  <ProductLabelView>
+                    <ProductText>{product.title}</ProductText>
+                    <ProductText>${product.price}</ProductText>
+                  </ProductLabelView>
+                </ProductView>
+              );
+            })}
+          </ProductsView>
+        </ScrollView>
+      )}
     </MainContainer>
   );
 };
